@@ -1,0 +1,69 @@
+.menuCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* border: 1px solid; */
+}
+
+.menuCard > img {
+    width: 500px;
+    margin: 30px auto;
+    /* border: 2px solid; */
+    border-radius: 20px;
+}
+
+
+.menuCard > a {
+    text-decoration: none;
+    background-color: #f5f1f1;
+    color: rgb(47, 45, 45);
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 50px;
+    box-shadow: 0 0 5px white;
+
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.menuCard > a:active {
+    box-shadow: inset 0 0 5px black;
+}
+
+.menuCard > a:hover {
+    justify-content: space-between;
+
+}
+
+
+
+@media (max-width: 600px) {
+    .menuCard > img {
+        width: 90%;
+    }
+    .menuCard > a {
+        bottom: 40px;
+        font-size: 1rem;
+        min-width: auto;
+        padding: 3px 10px;
+
+    }
+    
+}
+
+@media (max-width: 400px) {
+    .menuCard > a {
+        bottom: 35px;
+        font-size: 0.9rem;
+        padding: 0px 5px;
+
+    }
+    
+}
