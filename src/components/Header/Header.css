@@ -57,11 +57,19 @@
     text-decoration: none;
     color: black;
     transition: 200ms border-color;
+    /* border: 1px solid; */
 }
 
 .header a:hover {
-    border-bottom: 3px solid blue;
+    border-bottom: 3px solid var(--bg-1);
 
 }
 
+.header__menu a {
+    display: flex;
+    align-items: center;
+}
 
+.header__menuicon {
+    margin-right: 0.5rem;
+}

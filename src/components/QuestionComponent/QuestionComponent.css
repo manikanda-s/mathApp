@@ -1,0 +1,115 @@
+.questionComponent {
+    width: 800px;
+    height: 250px;
+    background-color: var(--bg-1);
+    margin: 30px auto;
+    border-radius: 20px;
+    position: relative;
+}
+
+.questionComponent__score {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid; */
+}
+
+.questionComponent__scoreIcon, .questionComponent__timerIcon {
+    font-size: 40px !important;
+}
+.questionComponent__scoreText, .questionComponent__timerText {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+.questionComponent__timer {
+    /* text-align: center; */
+    /* font-size: 1rem; */
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.questionComponent__icon {
+    margin-right: 10px;
+    font-size: 30px !important;
+
+}
+
+.questionComponent__numbers {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.questionComponent__options {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.questionComponent__answer {
+    width: 200px;
+    border: 1px solid;
+    margin: 30px auto;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.questionComponent__input {
+    text-align: center;
+    margin-top: 30px;
+}
+.questionComponent__input > input {
+    width: 200px;
+    font-size: 2rem;
+    text-align: center;
+    background-color: var(--bg-1);
+    border: none;
+}
+.questionComponent__input > input:focus-visible {
+    outline: none;
+}
+.no-spinners::-webkit-inner-spin-button,
+.no-spinners::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+@media (max-width: 1000px){
+    .questionComponent {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px){
+    .questionComponent {
+        width: 95%;
+    }
+    .questionComponent__numbers {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 400px){
+    .questionComponent__numbers {
+        font-size: 2rem;
+    }
+    .questionComponent__icon {
+        margin-right: 5px;
+    }
+    .questionComponent__scoreIcon, .questionComponent__timerIcon {
+        font-size: 30px !important;
+    }
+    .questionComponent__scoreText, .questionComponent__timerText {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.8rem;
+    }
+}

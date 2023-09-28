@@ -9,6 +9,6 @@ body {
 }
 
 :root {
-  --bg-1: lightblue;
-  --color-1: lightblue;
+  --bg-1: rgb(105, 218, 255);
+  --color-1: rgb(105, 218, 255);
 }

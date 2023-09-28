@@ -31,3 +31,11 @@
         color: black !important;
     }
 }
+.Drawer__links a {
+    display: flex;
+    align-items: center;
+}
+
+.header__menuicon {
+    margin-right: 0.5rem;
+}

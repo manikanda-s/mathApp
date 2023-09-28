@@ -3,12 +3,16 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
-import './TemporaryDrawer.css'
-import MenuIcon from '@mui/icons-material/Menu';
+import "./TemporaryDrawer.css";
+import MenuIcon from "@mui/icons-material/Menu";
+
+import ExtensionIcon from "@mui/icons-material/Extension";
+import CalculateIcon from "@mui/icons-material/Calculate";
+import FormatListNumberedIcon from "@mui/icons-material/FormatListNumbered";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
-    left: false
+    left: false,
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -30,16 +34,27 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <div className="Drawer__links">
-        <Link to="/play">Play</Link>
-        <Link to="/problems">Problems</Link>
-        <Link to="/quiz">Quiz</Link>
+        <Link to="/play">
+          <ExtensionIcon className="header__menuicon"/> 
+          <div>Play</div>
+        </Link>
+        <Link to="/problems">
+          <CalculateIcon className="header__menuicon" />
+          <div>Problems</div>
+        </Link>
+        <Link to="/quiz">
+          <FormatListNumberedIcon className="header__menuicon"/>
+          <div>Quiz</div>
+        </Link>
       </div>
     </Box>
   );
 
   return (
     <React.Fragment key={"left"}>
-      <Button onClick={toggleDrawer("left", true)} className="drawer-btn">{<MenuIcon />}</Button>
+      <Button onClick={toggleDrawer("left", true)} className="drawer-btn">
+        {<MenuIcon />}
+      </Button>
       <Drawer
         anchor={"left"}
         open={state["left"]}
